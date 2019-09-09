@@ -1,0 +1,31 @@
+import spa.*
+import personas.*
+
+test "ramiro" {
+	spa.atender(ramiro)
+	assert.equals(0, ramiro.contractura())
+	assert.notThat(ramiro.grasaDeLaPiel())
+
+}
+
+test "Atender a Todo el Mundo" {
+	spa.atender(olivia)
+	spa.atender(bruno)
+	spa.atender(ramiro)
+	// Olivia
+	assert.equals(3, olivia.concentracion())
+	//
+	//No se revisa el olivia.darseUnBanioDeVapor() por que no hace nada.
+	
+	// Bruno
+	assert.that(bruno.esFeliz())
+	
+	assert.equals(54500, bruno.peso())
+	assert.that(bruno.tieneSed())
+	
+	// Ramiro
+	
+	assert.equals(0, ramiro.contractura())
+	assert.notThat(ramiro.grasaDeLaPiel())
+	
+}
